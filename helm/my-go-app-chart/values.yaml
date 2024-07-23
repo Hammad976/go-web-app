@@ -1,0 +1,4 @@
+image:
+        repository: hammad976/my-go-app
+        pullPolicy: IfNotPresent
+        tag: "v1"

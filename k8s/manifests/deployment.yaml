@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: my-go-app
+  name: my-go-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-go-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: my-go-app
+    spec:
+      containers:
+        - image: docker.io/hammad976/my-go-app:v1
+          name: my-go-app
+          ports:
+            - containerPort: 8080
